@@ -1,0 +1,82 @@
+body{
+  padding: 5px;
+  background-color: rgba(164, 214, 46, 0.3);
+  text-align: center;
+}
+
+section{
+  width: 100%;
+}
+
+
+form#login-form {
+  background-color: rgb(94, 163, 123);
+  padding: 20px;
+  //background: linear-gradient(left, rgb(38, 149, 136) 20%, rgb(29, 104, 136) 60%, rgb(38, 149, 136) 20%);
+}
+#menu-nav{
+  display: flex;
+}
+
+/* #menu-nav>div{
+  width: 50%;
+  padding: 10px;
+  background-color: rgb(39, 82, 110);
+  border: 3px solid #FFF;
+  color: #FFF;
+} */
+
+.elemento-oculto {
+  display: none;
+}
+.elemento-visible{
+  display: block;
+}
+
+#add-contact-form{
+  padding-top: 10px;
+}
+.modal .modal-content {
+    padding: 20px;
+}
+.font-resalt{
+  font-weight: bold;
+  background-color: rgb(70, 193, 166);
+}
+.title-navbar{
+  padding-left: 25px;
+  padding-top: 5px;
+  font-size: 20px !important;
+  color: rgba(199, 222, 144, 1);
+}
+
+#consultaContactos{
+
+  padding: 30px;
+  margin-top: 50px;
+}
+#tags-table{
+  background-color: rgb(91, 117, 81);
+  font-size: 18px;
+  color : #FFF;
+  text-transform: uppercase;
+}
+#contactTable div.row, #tags-table.row{
+  margin-bottom: 0px !important;
+  padding: 10px;
+}
+
+#contactTable div.row:nth-child(2n+1) {
+  background-color: rgb(126, 172, 46);
+
+}
+
+#contactTable a{
+  color: #255a73;
+}
+
+@media only screen and (max-width: 992px){
+.modal#modalWatch {
+  width: 50% !important;
+}
+}

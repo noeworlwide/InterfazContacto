@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="./css/materialize.css">
+    <link rel="stylesheet" href="./css/style.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <title>Login | Proyecto Final</title>
+  </head>
+
+  <body>
+    <nav class="light-green darken-2 nav-wrapper pushpin" id="menuBar">
+      <div class="nav-wrapper">
+        <div class="left title-navbar">
+          <h5>Lista de Contactos</h5>
+        </div>
+        <!--<ul class="right hide-on-med-and-up">
+          <a href="#" data-target="mobile-demo" class="sidenav-trigger"><i class="material-icons">menu</i></a>
+        </ul>-->
+
+        <ul class="right">
+          <li>
+            <i class="material-icons">search</i>
+          </li>
+
+          <li class="input-field col s6 hide-on-small-only">
+            <input type="search" id="busqueda" class="materialize-textarea" placeholder="Búsqueda por nombre">
+          </li>
+          <li>
+            <a id="buttonNewContact" class="waves-effect waves-light btn btn-floating btn-small modal-trigger light-green" href="#modalAdd"><i class="material-icons">add</i></a>
+          </li>
+        </ul>
+      </div>
+    </nav>
+
+    <!--<ul class="sidenav" id="mobile-demo">
+      <li><a href="sass.html"></a></li>
+      <li><a href="badges.html">Components</a></li>
+      <li><a href="collapsible.html">Javascript</a></li>
+      <li><a href="mobile.html">Mobile</a></li>
+    </ul>->-->
+
+    <section id="consultaContactos" class="elemento-visible">
+      <div id="tags-table" class="row ">
+        <div id="name-table" class="col s5">Nombre</div>
+        <div id="telephone-table" class="col s5">Telefono</div>
+        <div id="edit-table" class="col s1"></div>
+        <div id="delete-table" class="col s1"></div>
+      </div>
+      <div id="contactTable"></div>
+    </section>
+
+    <!-- Modales -->
+
+    <div id="modalAdd" class="modal" form-type="agregar">
+     <div class="modal-content">
+       <h5 id="modalAddTitle">Agregar contacto nuevo</h5>
+       <form action="" id="add-contact-form" class="row">
+         <label for="add-contact-name" class="col s12"><legend>Nombre del contacto</legend><input type="text" id="add-contact-name" class="add-new-form"></label>
+         <label for="add-contact-tel-per" class="col s12 m6"><legend>Télefono personal</legend><input type="text" id="add-contact-tel-per" class="add-new-form"></label>
+         <label for="add-contact-tel-ofi" class="col s12 m6"><legend>Télefono de Oficina</legend><input type="text" id="add-contact-tel-ofi" class="add-new-form"></label>
+         <label for="add-contact-email-per" class="col s12 m6"><legend>Correo personal</legend><input type="text" id="add-contact-email-per" class="add-new-form"></label>
+         <label for="add-contact-email-ofi" class="col s12 m6"><legend>Correo de oficina</legend><input type="text" id="add-contact-email-ofi" class="add-new-form"></label>
+         <label for="add-contact-birthday" class="col s12 m6"><legend>Fecha de cumpleaños</legend><input type="date" id="add-contact-birthday" class="add-new-form"></label><br  />
+       </form>
+     </div>
+     <div class="modal-footer">
+       <a href="#modalAddConfirm" id="buttonConfimAdd" class="waves-effect waves-green btn-flat indigo darken-2 white-text modal-trigger">Agregar Contacto</a>
+     </div>
+    </div>
+
+   <div id="modalAddConfirm" class="modal bottom-sheet">
+     <div class="modal-content">
+       <h5>Confirmar</h5>
+      <div id="modal-confirm-text"></div>
+     </div>
+     <div class="modal-footer">
+       <a href="#!" id="buttonConfirmAccept" class="modal-close waves-effect waves-green btn-flat indigo darken-2 white-text">Agregar Nuevo Contacto</a>
+     </div>
+   </div>
+
+   <div id="modalNewContact" class="modal bottom-sheet">
+     <div class="modal-content" >
+       <h5>Contacto guardado <br />¿Deseas agregar otro contacto?</h5>
+       <p id="deleteModalName"></p>
+     </div>
+     <div class="modal-footer">
+       <a href="#!" id="buttonAddNewContact" class="modal-close waves-effect waves-green btn-flat indigo darken-2 white-text">Aceptar</a>
+     </div>
+   </div>
+
+   <div id="modalDelete" class="modal bottom-sheet">
+     <div class="modal-content" >
+       <h4>¿Deseas eliminar contacto?</h4>
+       <p id="deleteModalMensaje"></p>
+     </div>
+     <div class="modal-footer">
+       <a href="#!" id="deleteContactConfirm" class="modal-close waves-effect waves-green btn-flat red darken-2 white-text">Borrar</a>
+     </div>
+   </div>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+
+  <script>const ContactosMVC = {};</script>
+  <script type="text/javascript" src="./script/model.js"></script>
+  <script type="text/javascript" src="./script/view.js"></script>
+  <script type="text/javascript" src="./script/controller.js"></script>
+  <script type="text/javascript" src="./main.js"></script>
+  </body>
+</html>

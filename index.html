@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="./css/materialize.css">
+    <link rel="stylesheet" href="./css/style.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <title></title>
+  </head>
+  <body>
+    <div class="row">
+      <div class="col s0 m3"></div>
+      <div class="col s12 m6">
+        <div class="card">
+          <!--<div class="card-image">
+            <img src="media/images/imagen.png">
+          </div>-->
+          <div class="card-content">
+            <div class="row">
+              <div class="input-field col s12">
+                <input id="input-username" type="text" class="validate">
+                <label for="input-username">Ingresa tu usuario</label>
+              </div>
+              <div class="input-field col s12">
+                <input id="input-password" type="password" class="validate">
+                <label for="input-password">Ingresa tu contraeña</label>
+              </div>
+            </div>
+          </div>
+          <div class="card-action">
+            <a href="/contactos.html" id="butonContactos">Ir a contactos</a>
+          </div>
+        </div>
+      </div>
+      <div class="col s0 m3"></div>
+    </div>
+
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+    <script type="text/javascript">
+
+
+      const eAgregaCookie = document.getElementById('butonContactos');
+  		eAgregaCookie.addEventListener("click", function(e){
+         var username = document.getElementById('input-username').value;
+         document.cookie = 'sessionNombre='+username+'; sessionBool=1; sessionId=1; path=/; max-age=120';
+  		});
+
+    </script>
+
+  </body>
+</html>
