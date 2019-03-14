@@ -1,0 +1,10 @@
+Manifest-Version: 1.0
+Implementation-Title: refuerzoFront
+Implementation-Version: 0.0.1-SNAPSHOT
+Built-By: idscomercial
+Implementation-Vendor-Id: com.ids
+Build-Jdk: 1.8.0_201
+Implementation-URL: https://projects.spring.io/spring-boot/#/spring-bo
+ ot-starter-parent/refuerzoFront
+Created-By: Maven Integration for Eclipse
+
